@@ -2,18 +2,21 @@
   "version": 2,
   "builds": [
     {
-      "src": "src/index.js",
+      "src": "src/index.ts",
       "use": "@vercel/node"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "src/index.js"
+      "dest": "src/index.ts"
     }
   ],
-  "env": {
-    "DATABASE_URL": "mysql://root:xkEoohDYuiUZhzkqTPNDPJmMDNjmNuxw@junction.proxy.rlwy.net:36132/railway",
-    "PORT": "8000"
+  "build": {
+    "env": {
+      "DATABASE_URL": "mysql://root:xkEoohDYuiUZhzkqTPNDPJmMDNjmNuxw@junction.proxy.rlwy.net:36132/railway",
+      "JWT_SECRET": "iloveBackend",
+      "PRISMA_CLIENT_ENGINE_TYPE": "binary"
+    }
   }
 }

@@ -6,7 +6,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon src/index.js",
     "dev": "nodemon src/index.js",
-    "build": "prisma generate && ts-node src/index.js"
+    "build": "prisma generate && tsc"
   },
   "author": "",
   "license": "ISC",
